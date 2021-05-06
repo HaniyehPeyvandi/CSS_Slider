@@ -1,0 +1,150 @@
+*,*::before,*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.box{
+  width: 500px;
+  height: 300px;
+  background-color: #333;
+  margin: 70px auto;
+  position: relative;
+  overflow: hidden;
+}
+.wrapper {
+  display: inline-block;
+  position: relative;
+  padding-left: 40px;
+  cursor: pointer;
+  top: 230px;
+  left:200px;
+}
+input {
+  display: none;
+}
+.wrapper .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  margin: 0 5px;
+  border: 2px solid red;
+  background-color: #2196F3;
+  z-index: 9999;
+}
+.box > img {
+  position: absolute;
+  width:100% ;
+  height:100%;
+  float: left;
+}
+.box > .image-1{
+  left: -100%;
+  transition: 2s;
+}
+.box > .image-2{
+  left: -100%;
+  transition: 2s;
+}
+.box > .image-3{
+  left: -100%;
+  transition: 2s;
+}
+#radio-1:checked ~  .wrapper .checkmark-1 {
+  border: 2px solid white;
+}
+#radio-2:checked ~  .wrapper .checkmark-2 {
+  border: 2px solid white;
+}
+#radio-3:checked ~  .wrapper .checkmark-3 {
+  border: 2px solid white;
+}
+#radio-1:checked ~ .wrapper .checkmark-1{
+  background: url(/images/cute-smiling-yorkshire-terrier-puppy-picjumbo-com.jpg) no-repeat center center/ 35px 35px;
+}
+#radio-2:checked ~ .wrapper .checkmark-2{
+  background: url(/images/one-little-angry-cat-picjumbo-com.jpg) no-repeat center center/ 35px 35px;
+}
+#radio-3:checked ~ .wrapper .checkmark-3{
+  background: url(/images/lion-face-portrait-picjumbo-com.jpg) no-repeat center center/ 35px 35px;
+}
+#radio-1:hover ~ .wrapper  .checkmark-1:after {
+  content: "\25B2";
+  position: absolute;
+  top: -20px;
+  left:8px;
+  color: #2196F3;
+}
+#radio-1:hover ~ .wrapper  .checkmark-1:before {
+  content: "";
+  background: url('/images/cute-smiling-yorkshire-terrier-puppy-picjumbo-com.jpg') no-repeat center center/ 80px 80px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  top:-103px ;
+  left: -22px;
+}
+#radio-2:hover ~ .wrapper > .checkmark-2:after {
+  content: "\25B2";
+  position: absolute;
+  top: -20px;
+  left:8px;
+  color: #2196F3;
+}
+#radio-2:hover ~ .wrapper > .checkmark-2:before {
+  content: "";
+  background: url('/images/one-little-angry-cat-picjumbo-com.jpg') no-repeat center center/ 80px 80px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  top:-103px ;
+  left: -22px;
+}
+#radio-3:hover ~ .wrapper > .checkmark-3:after {
+  content: "\25B2";
+  position: absolute;
+  top: -20px;
+  left:8px;
+  color: #2196F3;
+}
+#radio-3:hover ~ .wrapper > .checkmark-3:before {
+  content: "";
+  background: url('/images/lion-face-portrait-picjumbo-com.jpg') no-repeat center center/ 80px 80px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  top:-103px ;
+  left: -22px;
+}
+#radio-1:checked ~ .image-1{
+  transform: translateX(100%);
+}
+#radio-1:checked ~ .image-2{
+  transform: translateX(-100%);
+}
+#radio-1:checked ~ .image-3{
+  transform: translateX(-100%);
+}
+#radio-2:checked ~ .image-2{
+  transform: translateX(100%);
+}
+#radio-2:checked ~ .image-1{
+  transform: translateX(-100%);
+}
+#radio-2:checked ~ .image-3{
+  transform: translateX(-100%);
+}
+#radio-3:checked ~ .image-3{
+  transform: translateX(100%);
+}
+#radio-3:checked ~ .image-1{
+  transform: translateX(-100%);
+}
+#radio-3:checked ~ .image-1{
+  transform: translateX(-100%);
+}
